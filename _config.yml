@@ -10,12 +10,12 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "Harry's Web Space"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Neuro, stat and ML :)"
 name                     : "Harry Fu Yu"
-description              : "Harvard 2021; Neuro, stat and ML :)"
-url                      : the base hostname & protocol for your site e.g. "https://harry-fuyu.github.io"
+description              : "Harvard 21"
+url                      : "https://harry-fuyu.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : harry-fuyu/harry-fuyu.github.io
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -71,15 +71,14 @@ analytics:
   google:
     tracking_id          :
     anonymize_ip         : # true, false (default)
-
+include: ["_pages"]
 
 # Site Author
 author:
   name             : "Harry Fu Yu"
   avatar           : https://raw.githubusercontent.com/harry-fuyu/harry-fuyu.github.io/master/images/avatar.jpeg
-  bio              : "Harvard 2021; Neuro, stat and ML :)"
+  bio              : "Harvard 2021"
   location         : "Hangzhou, China"
-  email            : "fu_yu@college.harvard.edu"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -87,36 +86,30 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://harry-fuyu.github.io"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
 
 
-# Site Footer
-footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
+
+# # Site Footer
+# footer:
+#   links:
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       # url:
+#     - label: "Facebook"
+#       icon: "fab fa-fw fa-facebook-square"
+#       # url:
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       # url:
 
 
 
 # Reading Files
-include:
-  - .htaccess
-  - _pages
+include: ["_pages"]
+# include:
+#   - .htaccess
+#   - _pages
+#   - _posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
