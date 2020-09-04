@@ -28,7 +28,7 @@ This blog series would love to introduce you to the basic ideas in deep learning
 - Familiarity to classic, commonly used deep learning models such as the convolutional neural networks, Recurrent neural networks and their variants, with some mathematical intuitions.
 - A candid discussion into the future of deep learning: how can neuroscience and deep learning help each other? What might be the fundamental obstacle towards general intelligence?
 
-Hereby I post my intended plan for this blog series, extending to 10 modules (I will split modules into multiple posts if there is too much content. Estimate reading time of each post would be 20 min.):
+Hereby I post my intended plan for this blog series, extending to 10 posts:
 
 ### I. Brain and Neural Nets
 - Brain as the pinnacle of human evolution
@@ -54,6 +54,8 @@ Hereby I post my intended plan for this blog series, extending to 10 modules (I 
     - Gradient based learning
     - Backpropagation
     - Regimes of ML
+- Being Bayesian: Learning as updating conditional probabilities
+- Discussion: perception as an inference problem
 
 ### III. Classification: understanding representation
 - Representation in human

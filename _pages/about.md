@@ -4,14 +4,12 @@ title: About
 permalink: /about/
 
 defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
+  - values:
       layout: single
       author_profile: true
 ---
+
+Check out my article about my experience during the time of Covid-19 on [Medium](https://medium.com/@fu_yu_6553/memoir-for-the-time-of-covid-19-part-i-january-to-march-dcc3a793be75)!
 
 ### What is your life trajectory so far?
 I grew up in Hangzhou, a beautiful and serene city in southeast China. When I was 15, I took on a government scholarship and went to highschool (ACSI) in Singapore. After four years in the one and only Garden City, I miraculously received an offer from Harvard to study applied mathematics. Now I settled on Neuroscience and I'm pursuing Master's Degree in statistics concurrently.
@@ -22,7 +20,7 @@ My research interest lies in the intersection between neuroscience, cognitive sc
 ### What's your personal interest?
 I love playing the piano for my own leisure:) My favorite composers are Chopin and Mozart. Currently I'm venturing my way into Chopin's Winterwind Etude. Fingers crossed (no pun intended) that I could make it through! 
 
-I'm also the music director, bass and accompanist for the Harvard Noteables. We dedicate to bring the best broadway show tunes to Harvard campus! Check out our ["youtube site"](https://www.youtube.com/user/HarvardNoteables)
+I'm also the music director, bass and accompanist for the Harvard Noteables. We dedicate to bring the best broadway show tunes to Harvard campus! Check out our [youtube site](https://www.youtube.com/user/HarvardNoteables)
 
 Additionally I'm a huge soccer fan, so huge that I don't have a favorite team, but just for soccer itself. I have also been playing the Football Manager series since 2014 and I know way too many players even in the lower level leagues:)
 

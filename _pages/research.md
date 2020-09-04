@@ -11,7 +11,7 @@ defaults:
       
 ---
 
-<img src="/images/harvard.png" width="40"> 
+<img src="/images/harvard.png" width="60"> 
 ### Sept 2018 - Present    
 Research Assistant, Harvard Vision Lab, Harvard University
 
@@ -25,7 +25,7 @@ Investigated the distribution of neural representations in convolutional layers 
     - Innovatively utilized Recurrent Neural Networks (RNN) as the encoder and decoder of a variational autoencoder (VAE) to explore what inductive bias could make VAE’s latent space more interpretable.
     - Implemented VAE in pytorch using pyro package to reconstruct projectile trajectories of particles and discovered that latent space is much more structured if vertically sliced trajectories are used as training data. 
 
-<img src="/images/TUM.png" width="40"> 
+<img src="/images/TUM.png" width="60"> 
 ### June 2020 - Aug 2020     
 Research Assistant, Macke Lab, Technical University of Munich (TUM)
 
