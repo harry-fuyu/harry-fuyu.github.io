@@ -63,12 +63,72 @@ At synaptic terminal, the neuron makes a connection onto the next neuron's dendr
 
 I will outline how the synapse works in a chemical synapse. I decide to write everything out in fine details because it would really help you understand the biological basis of learning, so I kindly ask you not to skip the next few paragraphs.
 
-After the electrical signals reaches the synaptic terminal, the signal (very positive electrical potential, which we call **depolarization**) will trigger the opening of a gate for Calcium ions. Since each Calcium ion has two positive charges, it forms a positive feedback for influx of more Calcium ions. The rise in Calcium ion concentration triggers the release of **vesicles**. The vesicles starts to fuse with the **presynaptic membrane**, which is the cell membrane on the previous neuron facing the signal recieving neuron, and release its contents, which are called **neurotransmitters**. Neurotransmitters are molecules that can be received by **receptors** on the **postsynaptic membrane** on the signal recieving neuron, and some examples would be dopamine, acetylcholine and seretonin. 
+After the electrical signals reaches the synaptic terminal, the signal (very positive electrical potential, which we call **depolarization**) will trigger the opening of a gate for Calcium ions. Since each Calcium ion has two positive charges, it forms a positive feedback for influx of more Calcium ions. The rise in Calcium ion concentration triggers the release of **vesicles**. The vesicles starts to fuse with the **presynaptic membrane**, which is the cell membrane on the previous neuron facing the signal recieving neuron, and release its contents, which are called **neurotransmitters**. Neurotransmitters are molecules that can be received by **receptors** on the **postsynaptic membrane** on the signal recieving neuron, and some examples would be dopamine, acetylcholine and glutamate. 
 
 The stronger the electrical signal arriving at the synaptic terminal (encoded in frequency of depolarization), the more vesicles will be released, the more neurotransmitter will be received by the next neuron, which will induce a stronger chemical signal in the post synaptic neuron, which has a higher chance of reaching the threshold and start passing down the signal one after another.
 
 
 ### 2. Neurons: Short term learning by changing synaptic efficacy
 
-Finally we are equipped with the jargons and concepts to talk about learning. Learning can be very broadly categorized into short term and long term depending on how long they last. 
+Finally we are equipped with the jargons and concepts to talk about learning. Learning can be very broadly categorized into short term learning and long term learning depending on how long they last. Short term learning does not involve structural change, but rather a change in synaptic efficacy. The effect usually last by on the order of seconds or minutes.
+
+So how can the transient change in synaptic strength be achieved?
+
+#### 2.1. Method 1: Releasing vesicles
+
+As previously mentioned, the vesicles in presynaptic terminal that contains neurotransmitters. If there are more vesicles released from the presynaptic terminal, more neurotransimitter molecules would be released into the space between the pre- and post- synaptic terminals called the **cleft**, causing the concentration of those molecules in the cleft to increase. As the concentration rises, there is a higher chance for the receptors on postsynaptic membrane to catch a floating neurotransmitter molecule and cause a small depolarization in the postsynaptic terminal. Hence, releasing more vesicles can definitely elicit a stronger response from the postsynaptic neuron, thereby enhancing synaptic strength, but only temporarily, since the access neurotransmitters can be recycled by presynaptic terminal or diffuse into other places are are lost.
+
+#### 2.2. Method 2: Facilitation
+
+After the previous depolarization in the postsynaptic terminal, the electrical potential there would go back to its original state due to ions diffusing down their concentration gradient in and out of the postsynaptic cell. This means that the potential would decrease down slowly until it reaches the equilibrium at around -70mV, which is called the **resting potential**. This subsidizing process is slow: imagine a cup of hot tea set on a table in room temperature. The tea would cool down very fast at first, but the process of cooling slows down as the temperature of the tea gets closer to room temperature. Same thing happens here in the neuron, as the electrical potential restores towards the resting potential, the process of getting there gets slower. 
+
+Hence, facilitation happens when another small depolarization happens before the previous depolarization has fully subsided, resulting in the second depolarzation to reach a more positive potential than the neurotransimitters could ever contribute, by piggy-bagging on the first depolarization. Here is a graphical illustration.
+
+#### 2.3. (passive) Method 3: Vescicle depletion
+
+As vescicle fuses with the presynatic membrane, more and more vescicles are being produced at another site by cutting off the infolding of the presynaptic membrane. In the situation where stimulus arrives quickly in succession, the speed of vescicle regeneration lag behind the rate of vescicle release, resulting in less vescicle fusions and less neurotransmitter release than it should have been. This passive mechanism would hence decrease the synaptic strength temporarily. If we allow a short period of time for the vescicles to regenerate, this effect would be no longer in place.
+
+### 3. Long term learning by structrual change
+
+#### 3.1 Hebb's postulate
+Hebb's learning rule describes how structural change should be directed by learning activities. It can be stated succinctly in the following two sentences:
+
+> Fire together, wire together.
+
+> Out of sync, unlink.
+
+This sentence states that the neurons firing simultaneously should have a permanent increase in synaptic strength, because the synchronization has a functional relavence, and the second statement states the opposite direction. Hebb's rule has direct biological evidence from neuron recordings, that the aquisition of new skills are achieved by the synchronized firing of a pattern of neurons.
+
+- - - 
+##### Mathematical formulation
+
+(please feel free to skip)
+Mathematically, if two neurons have activations $x_i$, $x_j$, then the weight $w_{ij}$ connecting those two neurons should have the value:
+
+$$w_{ij} = x_ix_j$$
+
+This says the the weight between two neurons are directly proportional to the activation of both neurons, elegantly capturing the idea of Hebb's postulate. This learning rule for the value of weights is called the **Hebbian learning rule** in computational neuroscience.
+
+- - - 
+
+#### 3.2. Long term potentiation (LTP)
+LTP and it's opposite, long term depression (LTD), lies at the heart of long term learning, and these mechanisms are what allows the implementation of Hebb's rule. LTP is a viable candidate for the cellular mechanism for learning and memory!
+
+![](/images/LTP.png)
+
+LTP has a mechanism that involves the G-protein cascades that acts as a coincidence detector that is activated if both presynaptic activity and postsynaptic depolarzation happens simultaneously. If this coincidence detector is activated, then LTP changes the structure of this synapse by buiding and inserting more neurotransmitter receptors into the postsynaptic membrane, expanding current postsynaptic terminal, or even split current terminal into two for stronger response, as shown in figure above.
+
+![](/images/LTP_example1.png)
+![](/images/LTP_example2.png)
+
+Now I'll try to convince you that LTP modulation on neuron is a frequent event and the structural change can be quite drastic. In the figure above, scientists imaged part of the mouse brain area that are responsible for whisket activities. The transient dentritic spines are marked in blue in the bottom row of images. We see that a brand new, large dentritic spine emerged on day 5, and completely dissappeared on day 6. There is also another spine marked in red that only appeared for three days.
+
+### Case Study: Short term and long term learning in Aplysia
+
+
+
+
+
+
+
 
