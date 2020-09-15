@@ -102,7 +102,6 @@ This sentence states that the neurons firing simultaneously should have a perman
 - - - 
 ##### Mathematical formulation
 
-(please feel free to skip)
 Mathematically, if two neurons have activations $x_i$, $x_j$, then the weight $w_{ij}$ connecting those two neurons should have the value:
 
 $$w_{ij} = x_ix_j$$
@@ -116,19 +115,45 @@ LTP and it's opposite, long term depression (LTD), lies at the heart of long ter
 
 ![](/images/LTP.png)
 
-LTP has a mechanism that involves the G-protein cascades that acts as a coincidence detector that is activated if both presynaptic activity and postsynaptic depolarzation happens simultaneously. If this coincidence detector is activated, then LTP changes the structure of this synapse by buiding and inserting more neurotransmitter receptors into the postsynaptic membrane, expanding current postsynaptic terminal, or even split current terminal into two for stronger response, as shown in figure above.
+LTP has a mechanism that involves the G-protein cascade that acts as a coincidence detector that is activated if both presynaptic activity and postsynaptic depolarzation happens simultaneously. If this coincidence detector is activated, then LTP changes the structure of this synapse by buiding and inserting more neurotransmitter receptors into the postsynaptic membrane, expanding current postsynaptic terminal, or even split current terminal into two for stronger response, as shown in figure above.
 
 ![](/images/LTP_example1.png)
 ![](/images/LTP_example2.png)
 
 Now I'll try to convince you that LTP modulation on neuron is a frequent event and the structural change can be quite drastic. In the figure above, scientists imaged part of the mouse brain area that are responsible for whisket activities. The transient dentritic spines are marked in blue in the bottom row of images. We see that a brand new, large dentritic spine emerged on day 5, and completely dissappeared on day 6. There is also another spine marked in red that only appeared for three days.
 
-### Case Study: Short term and long term learning in Aplysia
+### 3.3 Case Study: Learning in Aplysia
 
+One of the most curious example is provided in Aplysia, a type of sea snail. Please allow me to digress a little bit on why neuroscientists love to study creatures from the sea. Recall that we talked about the presence of myelin sheath around the axon in our neurons in section 1, and it turned out that myelination is a advanced invention that allows faster transmission of electrical signals down the axons. 
 
+We can basically treat the axon as an electric cable and describe it's electrical resistance using the formulas in physics:
 
+$$R = \frac{\rho L}{A}$$
 
+where $R$ is electrical resistance, $\rho$ is resistivity of material, $L$ is the length of the cable, and $A$ is the cross sectional area. In rather premitive animals that does not have myelin sheath, $\rho$ might be large, since the memberanes of the axon is leaky, and ions will leak out due to diffusion, hindering further signal transmission. In order to minimize electrical resistance, those animals who really need fast, instant signal transmission with strong physical and muscular response would seek to increase cross sectional area of the axon. This results in gigantic axons, particularly in huge marine animals like squids, to which a extremely strong escape response will be essential to its survival when danger is detected, and those giant axons would grow to about 1mm in diameter, fully visible under human eye. This is also how scientists first know about the content of an axon: they practically squeezed out the content of a giant axon and measured concentration of different ions. We humans, and other small animals, apparently cannot afford such a giant axon. Hence we resort to myelination, which is essentially a multiple wrapping of cellular membranes around the axon by another cell called Schwann cell, therefore greatly increasing electrical resistance across the memberane of the axon with reduced ion leakage, and much faster, stable signal transmission down to synaptic terminal, without having a large cross sectional area.
 
+![](/images/aplysia1.png)
+![](/images/aplysia2.png)
+
+Back to Aplysia, this wonderful creature's nervous system is fully and systematically studied. In this experiment illustrating learning in Aplysia, when its siphon is touched gently, its gill contracts, with the extent of contraction proportional to the force of touching, as illustrated in experiment B1. In experiment B2, scientists locate a nerve ganglion (a group of several neurons) at the abdomen of Aplysia, and only removed this ganglion at step 8, and then the contraction response vanished, showing that this response is initiated and controlled by this particular ganglion. 
+
+#### 3.3.1 Short term learning: habituation and sensitization
+
+![](/images/aplysia_short_term.png)
+
+Short term learning is illustrated by the above figure. In experiment A, scientist exert the same amount of force onto the siphon, however, the maximum response of the gill contraction drops as we repeat this experiment, as if the aplysia becomes "numb" to the simulation. Not until a rest of two hours, can a response of original intensity can be again observed when touching the siphon with the original force. This "numbing" is called **habituation** to the stimulus, and its most direct and probable cause is the depletion of vesicles that contains neurotransmitters outlined in section 2.3.
+
+Experiment B shows the phenomenon of **sensitization**. After the aplysia has habituatied to the stimulus, scientists at exert a highly obnoxious stimulus to the siphon (e.g. poke its siphon or head with a needle instead of gently touching), it can resets the magnitude of the gill contraction response. Sensitization hence serves as a protection mechanism, such that when in danger, aplysia can "de-habituate" from the enviornment and restore its alertness. You might ask "how can sensitization be achieved if there is a shortage of vesicles?" This is a fantastic question and there are multiple way to do this. One source of modulation comes from its motor neurons that releases seretonin, which helps boost up vesicles avaliable.
+
+#### 3.3.2 Long term learning in Aplysia
+
+![](/images/aplysia_long_term.png)
+
+When we repeat the short term learning experiment multiple times and let Aplysia to get habituated, amazingly long term learning occurs, and the response is shown above. For each training, we touch the siphon gentlely multiple times until habituation, allows the aplysia to rest, and repeat the training process. We see that the initial response of each training iteration is decreasing rapidly, showing a kind of long term adaptation. This diminishing response is only "forgotten" after a whole 14 weeks, when the scientists test it again on day 26. (Recall that habituation only lasted less than 2 hours) This is mediated by LTP mechanisms and I would say that this is a primitive form of memory: we have identified a cellular mechanism for which the aplysia is able to "remember" that it has receieved a lot of the same stimulus in the past few days!
+
+### 3.4 Neural Plasticity
+
+Neuroscientists use the word plasticity to describe the easiness of changing configuration and connections of neurons. **Synaptic plasticity** refers to the ability to change synaptic efficacy, and it can be either short term, or long term depending on whether structure changes are involved. On a much larger scale across thousands of synapses, **cortical plasticity** describes the ability to rewire neuron connections on a massive scale. We will revisit the idea of plasticity in later posts with a canonical example on Barn owls, but the take away point here is that learning done in brain can be interpreted as exercising the plasticity, rewiring and reconfiguring the connections according to the tasks we faced and our experiences with the world.
 
 
 
