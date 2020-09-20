@@ -119,11 +119,12 @@ One huge advantage of bipedalism is that the evolution of brain and evolution of
 The final idea that I would like to introduce before we switch to artificial neural networks is about the proportion of areas on cortex dedicated to sensory, somatosensory and motor systems. We can see that our common ancestor has alsomst all areas on the cortex dedicated to these rudimentory functions, leaving little room for higher order cognitive functions. But for us humans, these areas only takes up little room on our cortex! Our association cortices (those apart from sensory and motor purposes) have expanded disporportionately throughout the course of evolution, and offered us immense opportunities to realize much more complicated functions.
 
 
-# ------------------------------------------------------------------------
+- - -
+
+# 2. Introduction to Artificial Neural Networks
 
 ![](/images/nn.png)
 
-# 2. Introduction to Artificial Neural Networks
 ### 2.1 Neural Network Basics
 
 I first learnt the existence of neural network(NN) from Dr. Jun Liu's book _Beauty of Mathematics_ , but it took me a while to get its essential idea. To summarize NN in one sentence:
@@ -230,7 +231,7 @@ Secondly and even more predominantly, is the phenominal increase in avaliable co
 
 $$\mathbf{y} = f(\mathbf{W}^T\mathbf{X})$$
 
-During training, a lot of matrix multiplication need to be completed (in both forward and backward pass, we will revisit this), and we know that matrix multipication, when done naively, has the complexity of $O(n^3)$. This basically means that the time we need to compute the product of two two dimensional square matrix with $n$ rows scales with the cube of $n$, which increments extremely fastly. Now imagine that you have one million neurons in a layer and your weight matrix is a million by million! The amount of computation is beyond imagination and traditional CPUs simply could not handle these computations. 
+During training, a lot of matrix multiplication need to be completed (in both forward and backward pass, we will revisit this), and we know that matrix multipication, when done naively, has the complexity of $O(n^3)$ (the best runtime can be achieved is around $O(n^{2.373})$, with very smart and complecated algorithms). This basically means that the time we need to compute the product of two two dimensional square matrix with $n$ rows scales with the cube of $n$, which increments extremely fastly. Now imagine that you have one million neurons in a layer and your weight matrix is a million by million! The amount of computation is beyond imagination and traditional CPUs simply could not handle these computations. 
 
 Luckily, GPUs, which we used for graphic rendering in games are designed to handle matrix multipications. In 2010, with some tricks, we found a way to interface with the GPU, actually training deep learning models on them and accelerating training process significantly. Here's a photo of NVIDIA's GPU. Up to my knowledge, only NVIDIA's GPUs are compatible with deep learning frameworks. (Maybe a good idea to buy NVIDIA's stocks?)
 ![](/images/NVIDIA.png)

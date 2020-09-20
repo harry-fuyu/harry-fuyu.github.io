@@ -20,7 +20,7 @@ My research interest lies in the intersection between neuroscience, cognitive sc
 ### What's your personal interest?
 I love playing the piano for my own leisure:) My favorite composers are Chopin and Mozart. Currently I'm venturing my way into Chopin's Winterwind Etude. Fingers crossed (no pun intended) that I could make it through! 
 
-I'm also the music director, bass and accompanist for the Harvard Noteables. We dedicate to bring the best broadway show tunes to Harvard campus! Check out our [youtube site](https://www.youtube.com/user/HarvardNoteables)
+I'm also the music director, bass and accompanist for the Harvard Noteables. We dedicate to bring the best broadway show tunes to Harvard campus! Check out our [youtube site](https://www.youtube.com/user/HarvardNoteables).
 
 Additionally I'm a huge soccer fan, so huge that I don't have a favorite team, but just for soccer itself. I have also been playing the Football Manager series since 2014 and I know way too many players even in the lower level leagues:)
 
