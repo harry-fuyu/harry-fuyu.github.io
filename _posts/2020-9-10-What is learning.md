@@ -2,6 +2,10 @@
 title: "Neuro & AI (ii): What is learning?"
 comments: true
 
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
+
 categories:
   - Neuro&AI
 tags:
@@ -10,12 +14,12 @@ tags:
   - Neural Network
 published: true
 
-excerpt: "Introduction to the concept of learning in neurons and in neural networks"
+excerpt: "Interpretation of learning in neurons, neural networks and in a statistical sense"
 header:
   overlay_image: /images/header.jpg
 ---
 
-Welcome to the second post in he series of Neuro & AI! This post covers one of my favorite topics, and to some extent even philosophical, about what the process of learning is. When we were kids and we were trying to learn how to ride a bike, what is the process going on in our brain? Is this process different when we associate a newly seen word "bike" to the object in front of us with two wheels? 
+Welcome to the second post in the series of Neuro & AI! This post covers one of my favorite topics, and to some extent even philosophical, about what the process of learning is. When we were kids and we were trying to learn how to ride a bike, what is the process going on in our brain? Is this process different when we associate a newly seen word "bike" to the object in front of us with two wheels? 
 
 We mentioned several times even in the first post, and you might have known that neural network needs to be trained. If we were to teach the network, how is the network learning? What information, in what form, is retained during its learning? 
 
@@ -311,7 +315,7 @@ Let us revisite the idea of a model in section 2.1. A parametric model is formal
 - the type of problems that any parametric model can describe is limited due to the finite dimensional parameter space.
 - any parametric model involves a set of assumptions for the problems, embedded in the specific choice of the family of distributions.
 
-Therefore, non-parametric methods triumphs in the sense that it is not making any assumption about underlying distributions and hence have the potential of reaching less systematic errors (I'm planning to having an additional post specifically on error decompositions and empirical risk minimization). Here's an example for non-parametric method: suppose we would like to estimate the whole cumulative distribution function (CDF). In this case, the empirical cumulative distribution, ECDF, would be a non-parametric estimation of the CDF, since it does not have any model assumption, and only utilizes the data.
+Therefore, non-parametric methods triumph in the sense that it is not making any assumption about underlying distributions and hence have the potential of reaching less systematic errors (I'm planning to having an additional post specifically on error decompositions and empirical risk minimization). Here's an example for non-parametric method: suppose we would like to estimate the whole cumulative distribution function (CDF). In this case, the empirical cumulative distribution, ECDF, would be a non-parametric estimation of the CDF, since it does not have any model assumption, and only utilizes the data.
 
 It seems for now that non-parametric methods are superior in the sense of making less assumptions, so why are we still using parametric methods? The answer is that when we have reasonlbly strong information about the problem at hand, making some suitable parametric assumption would make the inference problem much, much easier. For example, if I would like to describe the fairness of a coin, making the parametric assumptions that each toss the coin has probability $p$ of landing heads make perfect sense because it captures the essence of coin tosses. All we need to do is to estimate parameter $p$. 
 

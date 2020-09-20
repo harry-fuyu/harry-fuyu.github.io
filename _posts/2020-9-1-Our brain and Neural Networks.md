@@ -2,6 +2,10 @@
 title: "Neuro & AI (i): Our Brain and Neural Networks"
 comments: true
 
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
+
 categories:
   - Neuro&AI
 tags:
@@ -29,7 +33,7 @@ Exciting! Let's get started!
 
 <img src="/images/MRI.png"> 
 
-# 1. Brain as the pinnacle of human evolution
+## 1. Brain as the pinnacle of human evolution
 
 ### 1.1 Brief history of neuroscience
 
@@ -121,7 +125,7 @@ The final idea that I would like to introduce before we switch to artificial neu
 
 - - -
 
-# 2. Introduction to Artificial Neural Networks
+## 2. Introduction to Artificial Neural Networks
 
 ![](/images/nn.png)
 
