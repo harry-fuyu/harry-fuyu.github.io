@@ -1,5 +1,5 @@
 ---
-title: "Neuro & AI (i): Our Brain and Neural Networks"
+title: "Neuro & AI (I): Our Brain and Neural Networks"
 comments: true
 
 toc: true

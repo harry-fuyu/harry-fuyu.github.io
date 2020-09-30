@@ -1,5 +1,5 @@
 ---
-title: "Neuro & AI (ii): What is learning?"
+title: "Neuro & AI (II): What is learning? (Part 1)"
 comments: true
 
 toc: true
@@ -14,7 +14,7 @@ tags:
   - Neural Network
 published: true
 
-excerpt: "Interpretation of learning in neurons, neural networks and in a statistical sense"
+excerpt: "Interpretation of learning in neurons and neural networks"
 header:
   overlay_image: /images/header.jpg
 ---
@@ -23,26 +23,9 @@ Welcome to the second post in the series of Neuro & AI! This post covers one of 
 
 We mentioned several times even in the first post, and you might have known that neural network needs to be trained. If we were to teach the network, how is the network learning? What information, in what form, is retained during its learning? 
 
-We are also interested in two philosophical points:
+We are also interested in two philosophical points: (Will be in part 2)
+-  We will dive deeper in to statistics and talk about learning from a Bayesian perspective. We would first understand what is Bayesian thinking, and I will try to convince you that in the Bayesian world, learning is purely about updating conditional probabilities we call posterior. From here, we are heading into another major philosophical theme, which is that perceptions done by the brain can be treated as a statistical inference problem. (we will definitely discuss this in more detail in later posts)
 - How is learning in human brain different from learning in neural networks? On which abstraction levels are they similar, and on which level are they not? From this discussion, we are heading into one of the philosophical themes of the blog post series, which is about whether making neural networks more similar to human brains would always be beneficial for model performance.
-- We will dive deeper in to statistics and talk about learning from a Bayesian perspective. We would first understand what is Bayesian thinking, and I will try to convince you that in the Bayesian world, learning is purely about updating conditional probabilities we call posterior. From here, we are heading into another major philosophical theme, which is that perceptions done by the brain can be treated as a statistical inference problem. (we will definitely discuss this in more detail in later posts)
-
-<!-- Here's the bullet point agenda for today:
-- Neuron 101: cell structure and chemical synapse
-- Neurons: Short term learning by changing synaptic efficacy
-- Neurons: Long term learning by making structrual change
-    - Hebb's Rule
-    - Long term potentiation and depression
-    - Case study: Desensitization in Aplysia
-    - Synaptic plasticity
-- ML: Learning as an optimization problem
-    - Model, parameter, estimator, inference
-    - Loss function and loss landscape
-    - Gradient based learning
-    - Backpropagation
-    - Regimes of ML
-- Being Bayesian: Learning as updating conditional probabilities
-- Discussion: perception as an inference problem -->
 
 If you can't wait to find out to some of the questions above, great! Let's dive right into it!
 
@@ -319,8 +302,8 @@ Therefore, non-parametric methods triumph in the sense that it is not making any
 
 It seems for now that non-parametric methods are superior in the sense of making less assumptions, so why are we still using parametric methods? The answer is that when we have reasonlbly strong information about the problem at hand, making some suitable parametric assumption would make the inference problem much, much easier. For example, if I would like to describe the fairness of a coin, making the parametric assumptions that each toss the coin has probability $p$ of landing heads make perfect sense because it captures the essence of coin tosses. All we need to do is to estimate parameter $p$. 
 
+- - - 
 
-
-
+Now we have briefly visited learning in both biological neurons and in neural networks. Congratulations for making it through! In the second part of the post, we are going to introduce two more interpretations of learning in statistics and machine learning, and discuss similarities and differences in all approaches.
 
 
