@@ -31,7 +31,7 @@ Investigated the distribution of neural representations in convolutional layers 
 ### June 2020 - Aug 2020     
 Research Assistant, Macke Lab, Technical University of Munich (TUM)
 
-![](/images/sbi_HH_model.png)
+![](/images/SNPE.png)
 
 - #### Project: Simulation Based Inference For Multiple Datapoints
     - Established pipeline for testing sbi, which performs systematic Bayesian inference when likelihood of model is intractable bytraining a neural network to map data onto parameter posteriors, for its performance when multiple i.i.d. data is observed, provided a valuable reference for sbi users on the trade-off between model and computational complexity when using sbi.
