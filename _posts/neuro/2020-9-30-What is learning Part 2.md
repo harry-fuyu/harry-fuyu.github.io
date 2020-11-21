@@ -14,12 +14,13 @@ tags:
   - Neural Network
 published: true
 
-excerpt: "Interpretation of learning in the statistical sense"
+excerpt: "Bayesian thinking and statistical learning theory"
 header:
   overlay_image: /images/header.jpg
 ---
 
-Welcome back! In this post, we will briefly introduce two more interpretations of learning. I would expect this post, especially the second half to be very technical, so I will specify clearly which parts could be skipped without affecting the flow of understanding the whole blog series. However, I do think it would be extremely rewarding if we could perservere a little bit and dig throught the material that I intend to share!
+Welcome back! In this post, we will briefly introduce two more interpretations of learning, both from statistical perspectives. The first is learnign as updating conditional probabilities, where we discuss the profoundly simple Bayes theorem, and perception as an inference problem. Secondly we are going to introduce some introductory statistical learning concepts, including the idea of PAC learnability. This post might be the most technical so far, but I promise that I would make it intriguing! 
+
 
 <!-- - Thinking as Bayesian
 - Statistical learning
@@ -38,11 +39,11 @@ But first of all, what does Bayesian mean? In statistics, there are two main sch
 
 Now Bayesian came in to our rescue. The central idea of Bayesian perspective is to put a distribution on everything. For example, for a coin tossing experiment, we started with no knowledge about this coin. Hence we can put a prior which is a uniform distribution, meaning that our prior belief is that this coin will have any probability of landing heads with probability ranging from 0 to 1 equally likely. However, if we now flip the coin ten times and observed ten heads and no tails, we would be pretty sure that there is extremely high probablity that the coin is extremely unfair. 
 
-The Bayes theorem summarizes this idea of updating our knowledge upon observing experiment outcomes succinctly. Suppose that we are conducting experiments to estimate parameter $\theta$ and have some observations $X$. The conditional distribution of $\theta\| X $ describes what our new knowledge aobut $\theta$ is, given what has happened during the experiment. The Bayes theorem states that:
+The Bayes theorem summarizes this idea of updating our knowledge upon observing experiment outcomes succinctly. Suppose that we are conducting experiments to estimate parameter $\theta$ and have some observations $X$. The conditional distribution of $\theta\| X $ describes what our new knowledge about $\theta$ is, given what has happened during the experiment. The Bayes theorem states that:
 
 $$P(\theta|X) = \frac{P(X|\theta)P(\theta)}{P(X)}$$
 
-The proof is astoundingly simple: By definition of conditional probability, $P(\theta \cap X) = P(\theta\|X)P(X)$, but also $P(\theta \cap X) = P(X\|\theta)P(\theta)$. Rearranging the terms would yield the Bayes theorem. But yet, this theorem is so profound, single handedly defining the whole field of Bayesian statistcs. Before displaying the interpretation for each terms, I would like to point out that here information, whether it's innate or learnt, are discribed formally in terms of distributions. You can imagine that a flat distribution is saying that we are not sure of the value of the parameter, and a narrow, low variance distribution would mean that we are fairly sure about the value of our parameter. 
+The proof is astoundingly simple: By definition of conditional probability, $P(\theta \cap X) = P(\theta\|X)P(X)$, but also $P(\theta \cap X) = P(X\|\theta)P(\theta)$. Rearranging the terms would yield the Bayes theorem. But yet, this theorem is so profound, single handedly defining the whole field of Bayesian statistics. Before displaying the interpretation for each terms, I would like to point out that here information, whether it's innate or learnt, are discribed formally in terms of distributions. You can imagine that a flat distribution is saying that we are not sure of the value of the parameter, and a narrow, low variance distribution would mean that we are fairly sure about the value of our parameter. 
 
 - $P(\theta)$: **prior**. The prior represents what information we have about $\theta$ _before_ the experiment. 
 - $P(X\|\theta)$: **likelihood**. The likelihood represents how probable it is for us to observe what we have observed if the parameter has the value $\theta$. Note that here we are switching our perspective and treating the parameter $\theta$ as _fixed_, and looking at it as a function of data.
@@ -68,12 +69,102 @@ Another takeaway from the above demonstration is that we could almost think of p
 
 ### 1.3 Perception as inference
 
-_As this is the first discussion section in the whole series, I thought it would be beneficial to say that I do not have a clear answer for all the questions that I pose. I will throw out questions along the way, and I do hope that you as my readers would like to get involved by actively pondering on those questions, and it would be wonderful if you could post what you think in the comment section at the end of the post._
+<!-- _As this is the first discussion section in the whole series, I thought it would be beneficial to say that I do not have a clear answer for all the questions that I pose. I will throw out questions along the way, and I do hope that you as my readers would like to get involved by actively pondering on those questions, and it would be wonderful if you could post what you think in the comment section at the end of the post._ -->
 
-When we receive sensory information and perceive about the world, all our brain doing is to make sense of all information and form an explanation. This process is exactly the same as performing inference. For example, visual depth perception is inferred from photons bouncing off the same object and recieved in the retina of both eyes, and in the more extreme example of bats, the location information is all calculated in their delicated auditory systems according to time delays at both ears. (we will discuss its wonderful neural implementation in detail at some point definitely) 
+When we receive sensory information and perceive about the world, all our brain doing is to make sense of all information and form an explanation. This process is exactly the same as performing inference. For example, visual depth perception is inferred from photons bouncing off the same object and recieved in the retina of both eyes, and in the more extreme examples of bats or barn owls, where location information is all calculated in their delicated auditory systems according to time delays at both ears. Let's dive into this example right now!
+
+#### 1.3.1 Case study: Auditory perception in Barn Owls
+
+Humans are always described as visual animals, and out of our five senses, vision is unarguably the most "essential" for normal everyday life. But getting visual is not the only way to conduct life. In this diverse animal kingdom, many chose other means of navigation other than seeing. One important way is via sound, and another main way is through electrocurrents. 
+
+Let's focus on the cases where sound is used to locate and navigate, and specifically in barn owls. One common misconception about localization with audio signal is that our brain calculates the distance to the target by directly calculate the time difference between the arrival of sound in both ears. Here's why this can't be true. Let us crudely estimate the diameter of head of bar owl to be around 15cm, and the speed of sound propagaion is around 330m/s. This means that the time difference between the arrivals in the two ears of the barn owl, which is called **interaural time**,  is at maximum $0.15/330 = 0.45$ ms! Relating back to the signal conduction in neurons, it takes 10ms for an action potential to propagate itself. Therefore, it is impossible to implement the neural circuit in a way that calculates the interaural time directly.
+
+Instead, evolution has brought us an ingenious solution. Here is a real image of the portion of brain stem that implements the neural hardward that found a way to be able to calculate interaural time. 
+
+![](/images/barn_owl_section.png)
+*Carr and Konishi, 1990*
+
+Here we can see the clear, elongated and rectanguar shading of *nucleus laminaris* (NL) leaning about 45 degrees to the left, and to the right is the circular *nucleus magnocellularis* (NM). Zooming out, with the following schematic we can see the relavant parts about the morphology and connections of the neurons:
+
+![](/images/barn_owl_neural.png)
+*Carr and Konishi, 1990*
+
+We curiously observe that the neural morphologies are disalike on the two sides. On the right, the axons split off at a central location relative to the right NL, and goes into different segments of NL like a canopy span. However, on the left, the axon split off very close to the middle line, meaning that the axons reaching to the far edge of left NL has to be much longer than the part of axon going into the part of NL that is closer to the middle. This asymetry is observed in the counter part of this neuronal pattern, meaning that what is ommitted from this figure for the purpose of clarity, are another clusters of neurons that have its axon split of like a canopy on the left NL and split unequally on the right, just the opposite of what the figure is showing. The next figure illustrates both sets of neurons, on the right side of NL as follows:
+
+![](/images/NL.png)
+*Carr and Konishi, 1990*
+
+The ingenious part is that this neural circuits is able to detect the 0.45ms interaural (between the two ears) delay. The axons carry forward neural signals just as electric cables carry forward electric current, and hence it takes time for the signals to travel down the axon, with the time taken proportional to axonal length. Now let us imagine that the auditory signal hits the left ear slightly earlier than the right. The signal at left ear is picked up only by the neuron on the top in the above figure, and the signal at right ear is only picked up by the neuron at the bottom. The idea is that, **different extent of interaural delay will result in the top and bottom signals converging at different blue neurons in the above figure**. Therefore, if we have another set of neurons mapping those blue neurons to different angles, our brain in able to pinpoint the angle at which the signal is coming from. 
+
+In some sense, our brain is trying to solve an inference problem in this context. Given an observed sound signal, our brain wish to estimate its incoming angle. However, though this method is very smart to circumvent the issue of being unable to directly compute interaural time, it also has its limitations. For example, one thing I could think of is that this implementation is discretizing continuous angles. If we have a mapping between different "blue neurons" and different angles, and we have a limited number of those "blue neurons", then we are only able to pinpoint the direction with limited certainty. Say if we have a total of 360 of those "blue neurons", and the neuron corresponding to 60 degrees (with respect to where we are facing) lights up, we only know that the source ranges from 59.5 to 60.5 degrees. Hence, a little digression here is that, it seems that all that we experienced, though feels continuous, is actually all discrete. We see continuous motion, but what is really happening is that our retina retains its response to photons a little such that snapshots are glued together into continuous motion. That's also how film works. But back to thinking as a Bayesian, the response of our 360 neurons can be interpreted as a discretized estimation of the posterior distribution of the angle.
 
 
+## 2. Very gentle introduction to statistical learning
+
+I accredit this section to the textbook _Understanding Machine Learning: From Theory to Algorithms_ written by Shai Ben-David and Shai Shalev-Shwartz. I think this is really a fantastically written and organized book and I draw havily on the reference and ideas from the first few chapters of this book when I write this section. Very interestingly, the first chapter about the book is an extremely well written discussion about what is learning. While I am trying to lay out in detail how neuroscientists and statisticians interpret learning, they gave a extremely well summarized overview of the topic, and expecially why we care about machine learning. Hence, I sincerely recommend everyone to read it.
+
+### 2.1 The framework
+
+Here we aim to introduce machine learning problems in all generality with formality. We shall refer to our machine as a "learner". This learner might be as complex as a autonomous robot or as simple as a linear regression model, but we shll refer to it as our learner irrespectively. Now we are able to introduce all elements one by one.
+
+- The inputs to the learner:
+  - **Domain set**, $\mathcal{X}$. This is the set of where our data is coming from. For example, if we have a classification problem to classify whether an avocado is ripe, then we have all avocados as our domain set. It is usually represented by the space of avaliable features, for example, softness and degree of greenness of the avocado.
+  - **Target set**, $\mathcal{Y}$. This is the set of all possible labels. In the avocado example, our target set would consist of ripe, represented by number $1$, and not ripe, represented by number $0$.
+  - **Data set**, $\mathcal{D} = \{(x_i, y_i)\}_{i=1}^N$ with $n$ data points. Note that each data point is in the set $\mathcal{X}\times \mathcal{Y}$, consisting of the features and its corresponding true label.
+
+- The output of the learner:      
+A function mapping the domain set into the target set, i.e. it outputs a **hypothesis** $h$ with $h:\mathcal{X}→ \mathcal{Y}$. For example, a classifier that classifies all soft avocados as ripe avocados is a valid hypothesis, since it maps softness feature, part of the domain set, to ripeness, the target set. For each learner, it pre-chooses a set of hypothesis, called a **hypothesis class**, denoted by $\mathcal{H}$, that contains all possible hypothesis that the learner is able to choose from.
+
+- Data generation model:        
+A model of how data is generated. Formally, we view this as a probability measure of $\mathcal{D}$ over $\mathcal{X}$, let's denote this distribution as $\mu_{\mathcal{D}}$.
+
+- Labelling function (the oracle):      
+In some cases, we assume that there is a function that maps data to its ground truth labels, hence a "omniscious oracle". Mathematically, we are saying that there exists a function $f:\mathcal{X}→ \mathcal{Y}$ such that $f(x_i)=y_i$ for all $i$. 
+
+- Measurement for error:
+We define error of a hypothesis to be the probability that the hypothesis does not agree with the true labeling function at some point. Moreformally, if we have a subset $\mathcal{A}\subset \mathcal{X}$, with given dataset $\mathcal{D}$ and labelling function $f$, then the error for the hypothesis $h$ is defined as:
+
+$$\mathcal{L}_ {\mu,f}(h) := \mathbb{P}_{x\sim \mu_ {\mathcal{D}}}(h(x)\neq f(x))$$
+
+One important point to note is that our learner has no knowledge of the data generating $\mu_{\mathcal{D}}$ and $f$. In fact, as we can see, our learner's sole purpose is to learn about $f$.
 
 
+### 2.2 PAC learning
+
+Interestingly and somewhat surprisingly, PAC learning stands for **Probably Approximately Correct learning**. The idea is that, PAC learning formalizes the ability of a learner to output a "reasonable" hypothesis comparing to the true labeling function under some conditions. More formally, "approximately correct" correspond to the $\epsilon$ parameter, which bounds the tolerance of mistake made by hypothesis $h$ on data points, and "probably" corresponds to the $\delta$ parameter, which controls the probability of the hypothesis making an unacceptable mistake. 
+
+The intuition for PAC learning is that, a hypothesis class is learnable, i.e. a good enough hypothesis $h$ can be chosen to approximate labelling function $f$, if we can find a learning algorithm and select out this $h$ by running the algorithm on finite number of training data. It would be definitely not learnable if even infinite data is no use! More formally, restricting ourselves to supervised binary classification here: (please feel free to skip)
+
+> **(PAC learnability)** If there exist a learning algorithm such that for every $\epsilon, \delta \in (0,1)$, for any $\mu_{\mathcal{D}}$ and $f$, if $\exists h^* \in \mathcal{H}$ such that $\mathcal{L}_ {\mathcal{D},f}(h^* ) = 0$, and if exists a function $m_ {\mathcal{H}}:(0,1)^2→\mathbb{N}$, and by training this learning algorithm on no less than $m_ {\mathcal{H}}(\epsilon, \delta)$ i.i.d. data samples generated by $\mathcal{D}$ and labeled by $f$, it would return a hypothesis $h$ with $\mathcal{L}_ {\mathcal{D},f}(h) < \epsilon$, then we call this hypothesis class $\mathcal{H}$ PAC learnable.
+
+The mysterious function $m_ {\mathcal{H}}$ essentially describes minimal number of training data we need to select out a good enough hypothesis, and hence the name **sample complexity**. A bit more math would show that if the size of our hypothesis class is finite, then the sample complexity depends on the log of the size, and in fact, every finite size $\mathcal{H}$ is PAC learnable!
+
+> **Finite size hypothesis class is PAC learnable**, with sample complexity upper bounded by:
+
+$$m(\epsilon, \delta) \leq \frac{1}{\epsilon}\log (|\mathcal{H}|/\delta) $$
+
+
+### 2.3 Back to learning as optimization: Empirical risk minimization
+
+Recall that in the last post, we introduced neural network under the topic treating learning as an optimization problem. I wrote about how the most common gradient based optimization methods work and how we calculates those gradients by back propagation algorithm, but we never really ask ourselves: **Is optimizing over training loss the right thing to do?** This is one of the central questions of machine learning. With the tool of statistical learning theory, hopefully we can answer the question of when and how is minimizing training loss a sensible, and more importantly, an useful approach for our learners. 
+
+You might say, well, isn't the question self explanatory? We even call it "training error" and errors are meant to minimized. However, this is not always the case. You might have heard the term **overfitting**, which describes the situation where a trained model achieves very low training error on the training dataset, but does very poorly on the testing dataset. Hence, the story is not a simple one. But let use define training error more formally first. 
+
+Since our learner has no information about the data generating distribution $mu$ and the labelling function $f$, we subsequently have no access to the true error, which is a function of $\mathcal{D}$ and $f$. Hence, with only the access to the true labels restricted to the training set, we can define the training error, or **empirical risk**, as the proportion of misclassified data points:
+
+$$\mathcal{L}_{\mathcal{D}}(h)=\frac{1}{N}| \lbrace i\in \mathcal{I}: h(x_i)\neq y_i \rbrace |$$
+
+where $\mathcal{I} = \lbrace 1,2,\ldots,N \rbrace$ is the set of indices. The whole learning paradigm that aims to minimize this emprical risk, and hence optimization of it, is termed **empirical risk minimization (ERM)**. Hence, ERM aims to find the hypothesis $\hat h$ that minimizes training error:
+
+$$\mathcal{L}_{\mathcal{D}}(\hat h) = \min_{h\in \mathcal{H}}\mathcal{L}_{\mathcal{D}}(h)$$
+
+Overfitting is precisely the limitation of ERM. In fact, the restriction to a subset of all avaliable hypothesis, i.e. the definition for a hypothesis class $\mathcal{H}$, is to restrict ourselves the choices of hypothesis such that over-complicated models are not chosen, and hopefully overfitting can be avoided. Hence, we are interested in finding out when performing ERM will not lead to servere overfitting. The short story is that **if the hypothesis class is PAC learnable, then ERM rule works**! How wonderful is that! In fact, the ERM algorithm, i.e. an algorithm that minimizes training error, will be the learning algorithm satisfying the conditions in the definition of PAC learning. 
+
+This provides some justifications for why we would like to reduce training errors. However, we still made a lot of assumptions in our PAC learnability definition and is far from the real life story when we train a neural network.
+
+
+- - -
+
+Congratulation on reading through this difficult post! I hope my effort of explaining what is learning was illustrative and interesting. Starting next post, we are going into the theme of vision, where both human and machine vision will be introduced and discussed in detail!
 
 
