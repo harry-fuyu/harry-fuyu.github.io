@@ -19,7 +19,7 @@ header:
   overlay_image: /images/header.jpg
 ---
 
-Welcome back! In this post, we will briefly introduce two more interpretations of learning, both from statistical perspectives. The first is learning as updating conditional probabilities, where we discuss the profound yet simple Bayes theorem, and perception as an inference problem. Secondly we are going to introduce some introductory learning theory concepts, including the idea of PAC learnability. How can the topic on learnign be complete if we do not mention learning theory itself! 
+Welcome back! In this post, we will briefly introduce two more interpretations of learning, both from statistical perspectives. The first is learning as updating conditional probabilities, where we discuss the profound yet simple Bayes theorem, and perception as an inference problem. Secondly we are going to introduce some introductory learning theory concepts, including the idea of PAC learnability. How can the topic on learning be complete if we do not mention learning theory itself! 
 
 
 <!-- - Thinking as Bayesian
