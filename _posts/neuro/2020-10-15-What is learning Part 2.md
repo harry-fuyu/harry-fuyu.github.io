@@ -10,8 +10,9 @@ categories:
   - Neuro&AI
 tags:
   - Neuroscience
-  - Deep Learning
-  - Neural Network
+  - Statistical Inference
+  - Learning Theory
+
 published: true
 
 excerpt: "Bayesian thinking and statistical learning theory"
@@ -20,14 +21,6 @@ header:
 ---
 
 Welcome back! In this post, we will briefly introduce two more interpretations of learning, both from statistical perspectives. The first is learning as updating conditional probabilities, where we discuss the profound yet simple Bayes theorem, and perception as an inference problem. Secondly we are going to introduce some introductory learning theory concepts, including the idea of PAC learnability. How can the topic on learning be complete if we do not mention learning theory itself! 
-
-
-<!-- - Thinking as Bayesian
-- Statistical learning
-    - Hypothesis class, Empirical risk minimizer
-    - PAC learnable
-    - No free lunch
-- Compare and contrast -->
 
 ## 1. Thinking as a Bayesian
 
@@ -158,15 +151,13 @@ where $\mathcal{I} = \lbrace 1,2,\ldots,N \rbrace$ is the set of indices. The wh
 
 $$\mathcal{L}_{\mathcal{D}}(h') = \min_{h\in \mathcal{H}}\mathcal{L}_{\mathcal{D}}(h)$$
 
-Overfitting is precisely the limitation of ERM. In fact, the restriction to a subset of all avaliable hypothesis, i.e. the definition for a hypothesis class $\mathcal{H}$, is to restrict ourselves the choices of hypothesis such that over-complicated models are not chosen, and hopefully overfitting can be avoided. For example, if we have a linear model of $y_i = kx_i + b$, restricting on the total magnitude, $|k|+|b|<10$ would be restricting ourselves to a subset of all possible hypothesis, and hence, a **bias**. By introducing this bias, we are able to reduce the variability of our model and its performance, and this is exactly one formulation of the **bias-variance** trade-off.
+Overfitting is precisely the limitation of ERM. In fact, the restriction to a subset of all avaliable hypothesis, i.e. the definition for a hypothesis class $\mathcal{H}$, is to restrict ourselves the choices of hypothesis such that over-complicated models are not chosen, and hopefully overfitting can be avoided. For example, if we have a linear model of $y_i = kx_i + b$, restricting on the sum, $k + b <10$ would be restricting ourselves to a subset of all possible hypothesis, and hence, a **bias**. By introducing this bias, we are able to reduce the variability of our model and its performance, and this is exactly one formulation of the **bias-variance** trade-off.
 
-Hence, we are more interested in finding out when performing ERM will not lead to servere overfitting. The short story is that **if the hypothesis class is PAC learnable, then ERM rule works**! How wonderful is that! In fact, the ERM algorithm, i.e. an algorithm that minimizes training error, will be the learning algorithm satisfying the conditions in the definition of PAC learning. 
-
-This provides some justifications for why we would like to reduce training errors. However, we still made a lot of assumptions in our PAC learnability definition and is far from the real life story when we train a neural network.
+Hence, we are more interested in finding out when performing ERM will not lead to servere overfitting. The short story is that **if the hypothesis class is PAC learnable, then ERM rule works**! How wonderful is that! In fact, the ERM algorithm, i.e. an algorithm that minimizes training error, will be the learning algorithm satisfying the conditions in the definition of PAC learning. This provides some justifications for why we would like to reduce training errors. However, we still made a lot of assumptions in our PAC learnability definition and is far from the real life story when we train a neural network.
 
 
 - - -
 
-Congratulation on reading through this difficult post! I hope my effort of explaining what is learning was illustrative and interesting. Starting next post, we are going into the theme of vision, where both human and machine vision will be introduced and discussed in detail!
+Congratulation on reading through this difficult post! I hope my effort of explaining what is learning was illustrative and interesting. In the next post, we are going to zoom into the subtask of classification, and discuss prerequisites and procedures of classification carried out both by human and by algorithms!
 
 
