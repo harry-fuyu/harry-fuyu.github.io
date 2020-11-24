@@ -144,7 +144,7 @@ Therefore there's no magic (Yet!), a neural network is just a flexible function 
 **Mathmatically:** (please feel free to skip this technical portion)
 
 We describe Neural Networks as universal approximators to some reasonably continuous function in the following sense 
-> For every fixed precision parameter $ϵ > 0$ and every Lipschitz function $f:\[0,1\]^n →\[0,1\]$, it is possible to construct a network such that for every input $x \in [0,1]^n$ , the network outputs a number between f(x) − ε and f(x) + ε.
+> For every fixed precision parameter $ϵ > 0$ and every Lipschitz function $f:\[0,1\]^n →\[0,1\]$, it is possible to construct a network such that for every input $x \in [0,1]^n$ , the network outputs a number between $f(x) − ϵ$ and $f(x) + ϵ$.
 
 The theorem is self-explanatory. For every point of $x$, we are able to construct a neural network $f$ such that $f(x)$ falls within some precision tolerance around the true value of a Lipschitz function at $x$, where Lipschitz basically means that your function's value cannot fluctuate too much within a certain interval, and hence essentially describing continuity.
 

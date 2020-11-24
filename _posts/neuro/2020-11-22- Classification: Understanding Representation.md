@@ -75,17 +75,40 @@ Hence, we only need to have another set of neurons that associates this **entire
 
 ### 1.3 Topographical maps
 
-A large part of the surface of our brain, i.e. the cerebral cortex, is organized in a manner such that neurons in adjacent parts on the cortex are responsive to adjacent spaces of the stimuli. In other words, there is a (mostly) continous mapping from the world to the representation of neurons on our cortex topographically, and this mostly happens for our sensory systems. We hence call it a **topographical map**. 
+A large part of the surface of our brain, i.e. the cerebral cortex, is organized in a manner such that neurons in adjacent parts on the cortex are responsive to adjacent spaces of the stimuli. In other words, there is a (mostly) continous mapping from the world to the representation of neurons on our cortex topographically, and this mostly happens for our sensory systems. We hence call them **topographical maps**. 
 
 #### 1.3.1 The visual map
 
-![](/images/topography_visual.png)
+We know that when a photo hits the retina, the retinal ganglion cells conduct the signal up into the brain through the visual canal to thalamus, and then to the **primary visual cortex (V1)** in the occipital lobe sitting at the back of our head. We will discuss the anatomy in detail in the next post, but the idea here is to realize that each cell in the primary visual cortex, as well as other areas in the first few visual areas on the cortex up the hierachy, is only responsive to stimulus in a small area in our **visual field**, which is the total range of the world that we are able to see. This small area is a property of that specific cell, called its **receptive field**, and the sensory neuron, in our case a cell in the primary visual cortex, would be ignorant for whatever that is happening outside its receptive field.
 
-<!-- 
+Hence, as the visual cortex is topographically organized, we must have that **the cells adjacent to each other in the visual cortex having adjacent receptive fields** too. Here is an illustration called **visualtopic map** of how our visual field maps out onto our brain by the wonderful neuroscientist Dr. Marcelo Rosa:
+
+![](/images/topography_visual.png)
+_M.G.P.Rosa,Braz J Med Biol Res, Vol 35(12), 2002_
+
+In A, we see that V1 and V2 are located at the back of the head (caudal is the anatomical directional term), and specifically, we see that V1 and V2 are illustrated to have clear cut boundaries defined by solid black lines. This clear boundary is shown by thick black dotted lines in B. The left of B is an illustration for an unfolded visual cortex, and the right of B is its corresponding visual field positions, and line types matches to show corresponding locations. We see that there is a star at the right of the unfolded cortex, corresponding to the center of our visual field. Expanding out from the horizontal white dotted line upwards and downwards on the unfolded cortex corresponds to rotating towards the vertical mid line in the visual field. When it reaches the boundary of V1, the direction flips and we would find ourselves in V2, and going upwards or downwards in V2 on teh unfolded cortex would instead corresponds to going back to the mid horizontal line. In fact, this flip is how neuroscientists identify the boundary of V1 and V2. The only discontinuity comes from the periphery of the unfolded cortex, where the entire parameter, as well as the middle horizontal line, would need to be integrated to form the middle horizontal line in the visual field.
+
 ![](/images/newton_topography.png)
+
+To add more spices to this story of topological mapping, we see that the map is distorted in the above figure, and realize that **different areas in the visual field is represented disproportionately on the cortex**, and the center of the visual field which corresponds to the fovea on our retina has much larger surface area and hence neurons on the cortex dedicated to it. If we were to find the corresponding neurons that fires when we see the face of Issac Newton, we will see a inverted, distorted face centered at the most caudal part of the occipital lobe.
 
 #### 1.3.2 The Homunculus: the somatosensory map
 
+Apart from visual representations, our somatosensory system also has topographical representations. Above is an illustration of the correspondence between positions on the somatosensory cortex and its responsible body parts. Note that the hands, face, tongue has disproportionately large representation on the cortex. 
+
 ![](/images/somatosensory.png)
 
-![](/images/homunculus.png) -->
+Another interesting point is about the symmetry as well as the asymmetry. We see that since we have two hands, two feet and so on, the representation is mostly symmetrical. The asymmetries, however, are more intriguing. 
+![](/images/homunculus.png){: width="300px" style="float:left; padding-right:10px"}
+For example, the parts corresponding to vocalization function is almost all on the left hemisphere (corresponding to the right side of this figure), which is reasonable, since the language related regions (Broca's, Wernicke's) are exclusively on the left too. If we were to draw a little man figure that has body parts proportional to its area of representation, we would have gotten this interesting homunculus figure on the left.
+
+## 2. Classification with algorithms
+
+![](/images/classification.png)
+
+### 2.1 Feature and decision boundary
+
+Let us imagine a naive method of performing classification according to some criterion in our former case of classifying cats and owls. First, we decide on some cat features and owl features, combine them into a feature vector for each of the cat and owl photos that we have (our dataset). For example, let us assume that we have the following four features: body length, size of eyes, pointy-ness of mouth and presence of feathers. 
+
+
+
