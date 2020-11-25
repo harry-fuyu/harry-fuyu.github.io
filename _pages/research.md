@@ -18,12 +18,12 @@ Research Assistant, Harvard Vision Lab, Harvard University
 - #### Thesis Project: Multi-Object Tracking With Top-down Location Proposals
 Currently conducting thesis research of combining top-down attention mechanism into object tracking networks such as Fast R-CNN and YOLO for better performance, since current region proposals in those networks are entirely decided bottom-up.
 
-<!-- ![](/images/prototype.png) -->
+![](/images/prototype.png)
 - #### Project: Top-down Visual Attention In Convolutional Neural Networks
 Investigated the distribution of neural representations in convolutional layers of Convolutional Neural Network (CNN) trained on classifying Cifar10 images, in order to design **category specific weights** used in modeling top-down visual attention. Discovered that similarity of image representation to category’s mean representation is not the criteria CNN is using for classification.
 
 - #### Project: Learning Interpretable Representations in Intuitive Physics
-<!-- ![Latent space extrapolation of VAE using RNN as encoder and decoder.](/images/latent.png) -->
+![Latent space extrapolation of VAE using RNN as encoder and decoder.](/images/latent.png)
     - Innovatively utilized Recurrent Neural Networks (RNN) as the encoder and decoder of a variational autoencoder (VAE) to explore what inductive bias could make VAE’s latent space more interpretable.
     - Implemented VAE in pytorch using pyro package to reconstruct projectile trajectories of particles and discovered that latent space is much more structured if vertically sliced trajectories are used as training data. 
 

@@ -36,26 +36,30 @@ Hereby I post my intended plan for this blog series, extending to 10 posts:
     - Gross neuroanatomy
     - How is human brain special?
 - Introduction to Neural Network
-    - Basic ideas of NN as an universal approximator
-    - Brief history of NN
-    - Rise of deep learning (why now?)
+    - Nueral network basics, universal approximator
+    - History of neural network
+    - Rise of deep learning
 
 ### II. What is learning: Goals and Rules
-- Neuron 101: cell structure and chemical synapse
-- Neurons: Short term learning by changing synaptic efficacy
-- Neurons: Long term learning by making structrual change
-    - Hebb's Rule
-    - Long term potentiation and depression
-    - Case study: Desensitization in Aplysia
-    - Synaptic plasticity
-- ML: Learning as an optimization problem
+- Learning in the brain
+    - Neuron 101: cell structure and chemical synapse
+    - Neurons: Short term learning by changing synaptic efficacy
+    - Neurons: Long term learning by making structrual change
+    - Case study: Aplysia
+    - Neural plasticity
+- Learning as an optimization problem
     - Model, parameter, estimator, inference
-    - Loss function and loss landscape
     - Gradient based learning
     - Backpropagation
     - Regimes of ML
-- Being Bayesian: Learning as updating conditional probabilities
-- Discussion: perception as an inference problem
+- Learning as updating conditional probabilities
+    - The Bayes Theorm
+    - Updating posteriors
+    - Perception as inference
+- Statistical learning theory
+    - Formal framework
+    - PAC learning
+    - Empirical risk minimization
 
 ### III. Classification: understanding representation
 - Representation in human
@@ -67,8 +71,6 @@ Hereby I post my intended plan for this blog series, extending to 10 posts:
     - Metric for performance: Confusion matrix
     - Perceptron algorithm
     - Feature engineering
-    - Demo: TensorFlow playground
-    - Extension: Shattering
 
 ### IV. Vision 1: Human vision
 - Early visual system anatomy
