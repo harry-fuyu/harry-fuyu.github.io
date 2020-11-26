@@ -72,12 +72,17 @@ Hereby I post my intended plan for this blog series, extending to 10 posts:
     - Perceptron algorithm
     - Feature engineering
 
-### IV. Vision 1: Human vision
-- Early visual system anatomy
-- Neuron tuning and receptive field
-- Visual system hierachy
-- The way we see is learnt: Insights from early visual development
-- Demystifying subconsciousness in vision
+### IV. Vision 1: Human vision and Infomax
+- Human visual system
+    - Early visual system anatomy
+    - Neuron tuning and receptive field
+    - Visual system hierachy
+    - The way we see is learnt: Insights from early visual development
+    - Demystifying subconsciousness in vision
+- Infomax and receptive field
+    - What is computational neuroscience?
+    - Mathematical modeling of early visual system
+    - Infomax derivation of receptive field
 
 ### V. Vision 2: Machine vision
 - Convolutional Neural Network

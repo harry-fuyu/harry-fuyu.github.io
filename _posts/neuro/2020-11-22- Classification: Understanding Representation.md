@@ -129,9 +129,10 @@ We always have to ask ourselves: what is good? In this case, what is a good clas
 
 When I first started my research, I was terribly ignorant about what I am trying to convey to you now, that **accuracy is NOT a good metric**. A good classifier should be able to truely tell apart cats from owls, not merely by guessing. However, if we just focus on whether the classifier can get all cats right, what the classifier should do to maximize this accuracy is to simply classify everything it sees as cats, because that would confirm $100\%$ accuracy on cats. However, this classifier gets all owls wrong, and hence in fact, shockingly yet reasonably, has zero discriminative power.
 
-Towards finding a good metric, consider the following four possible senarios, treating cat as our positive target: a cat correctly labeled as a cat (True Positive); a cat incorrectly labeled as an owl (False Negative); an owl correctly labeled as an owl (True Negative); and an owl incorrectly labeled as a cat (False Positive). A good classifier would love to maximize TP and TN, while minimizing FP and FN. We can also see that our naive classifier saying all the time gets $100\%$ TP, but at the same time $100\%$ FP. 
+Towards finding a good metric, consider the following four possible senarios, treating cat as our positive target: a cat correctly labeled as a cat (True Positive); a cat incorrectly labeled as an owl (False Negative); an owl correctly labeled as an owl (True Negative); and an owl incorrectly labeled as a cat (False Positive). A good classifier would love to maximize TP and TN, while minimizing FP and FN. We can also see that our naive classifier saying all the time gets $100\%$ TP, but at the same time $100\%$ FP. Visually, we can fill in the four scenarios as below in a **confusion matrix**.
 
-Hence, as you might have sensed, no lunch comes for free, and we must trade an increase in TP with some increase in FP! The question is, how much FP do we have to compromise for a increase in TP, and how do we minimize it? The following illustration would be very helpful to see this compomise:
+![](/images/confusion_matrix.png){: width="350px" style="float:left; padding-right:10px"}
+Hence, as no lunch comes for free, we must trade an increase in TP with some increase in FP! The question is, how much FP do we have to compromise for a increase in TP, and how do we minimize it? The following figure is illustrative:
 
 ![](/images/ROC.png)
 
@@ -153,7 +154,9 @@ To make a prediction, we pass the feature vector through this network and use th
 
 $$\hat{y}_i = sign(T^i) = sign(w^Ts^i)$$
 
-The critical observation here is that **if the prediction is correct, then the product of $y \cdot \hat y$ must be positive**. (If true label is $-1$, and predicting $-1$ and if true label is $1$ and predicting $1$) Hence, if the classification is wrong, $y \cdot \hat y < 0$, and we add/subtract scaled version of the current data point to the weight, i.e.
+Here we have two critical observations. 
+- Firstly, **the decision boundary is linear, and is the line perpendicular to the weight vector $w$**. This is because when we take the dot product of $w$ and $s$, only the points $s$ on the line perpendicular to $w$ would yield dot product of zero, thus separating postive predictions and negative predictions.
+- Secondly, **if the prediction is correct, then the product of $y \cdot \hat y$ must be positive**. (If true label is $-1$, and predicting $-1$ and if true label is $1$ and predicting $1$) Hence, if the classification is wrong, $y \cdot \hat y < 0$, and we add/subtract scaled version of the current data point to the weight, i.e.
 
 $$w^{(t+1)} = w^{(t)} + \eta y^is^i$$
 
@@ -161,7 +164,7 @@ This will result in the new prediction:
 
 $$\hat{T}_i^{(t + 1)} = (w^{(t+1)})^T s_i = (w^{(t)} + \eta y^is^i)^T s^i = \hat{T}_i^{(t)} + \eta y^i(s^i)^Ts^i$$
 
-This is because if we miss classified things as negative, then true label $y_i=1$, with $(s^i)^Ts^i$ positive since its sum of squares from a dot product, $\hat{T}_i^{(t + 1)}$ is more positive than $\hat{T}_i^{(t)}$, moving toward the right direction. (recall that $\hat{y}^i = sign(\hat{T}_i)$)
+The addition term is because if we miss classified things as negative, then true label $y_i=1$, with $(s^i)^Ts^i$ positive since its sum of squares from a dot product, $\hat{T}_i^{(t + 1)}$ is more positive than $\hat{T}_i^{(t)}$, moving toward the right direction. (recall that $\hat{y}^i = sign(\hat{T}_i)$)
 
 The constant $\eta$ is called **learning rate**, a concept which we mentioned before in the introduction of gradient descent. Here it also controls how fast we learn from misclassfied samples. Note that in this example, the decision boundary is linear and it goes through the origin (why?), hence an update would corresponds to the rotation of decision boundaries. A good leanring rate must be chosen, such that it does not rotate too much and result in faster and better convergence. Summarizing our algorithm:
 
@@ -195,8 +198,10 @@ However, if we simplify the structure of the network and reduce some features us
 
 ![](/images/playground3.png)
 
-Hence, the moral of the story is that the entire process is still a process of trial and error. It is extermely hard to pinpoint what is the suitable number of hidden layers and what kind of features are the best to use. We will discuss more about the heuristic aspect of deep learning soon when we discuss more about model training!
+Hence, the moral of the story is that the entire process is still a process of trial and error. It is extremely hard to pinpoint what is the suitable number of hidden layers and what kind of features are the best to use. We will discuss more about the heuristic aspect of deep learning soon when we discuss more about model training!
 
 - - -
 
-Thanks again for reading! With the new understanding of representation, we are ready to dive into human and machine vision, and finally talk about exciting concepts like the convolutional neural networks, and how machines see things differently than us! After introducing the common deep learning models, we can revisit the problem classification, and have a post with actually implementations!
+Thanks again for reading! One special note is that I have only revealed to you the tip of an iceberg for classification algorithms in section 2, and there so many other variants and types of thinking, such as supervised techniques like logistic regression, decision trees and unsupervised methods like clustering. However, I would reference you to more classical machine learning textbooks, which would also explain better and in greater details than me.
+
+With the new understanding of representation, we are ready to dive into human and machine vision, and finally talk about exciting concepts like the convolutional neural networks, and how machines see things differently than us! After introducing the common deep learning models, we can revisit the problem of classification, and have a post with actually implementations!
