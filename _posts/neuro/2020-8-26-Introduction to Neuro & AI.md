@@ -19,7 +19,7 @@ Welcome to the first blog post of the Neuro & AI series!
 
 Since 2012, deep learning has revolutionized the world in numerous aspects, changing our lives in almost every way possible. However, I found most of the machine learning and deep learning tutorials online focuses too much on the practical aspect. Most of them lack the mathematical intuition, and most importantly, none of them mentioned neuroscience at all.
 
-In short, our brain and an artificial neural network(ANN) can be infinitely alike or infinitely dissimilar, depending on your abstraction levels. Despite the fact that ANNs drew inspirations from biological neurons, one can also make a reasonable case that this as the only connection between ANN and our brain. But is this true? Does the similarities stop there? 
+In short, our brain and an artificial neural network(ANN) can be infinitely alike or infinitely dissimilar, depending on your abstraction levels. Despite the fact that ANNs drew inspirations from biological neurons, one can also make a reasonable case that this as the only connection between ANN and our brain. But is this true? Do the similarities stop there? 
 
 This blog series would love to introduce you to the basic ideas in deep learning, and in particular, focus on the intersection between neuroscience, cognitive science and deep learning. I wrote all the blogs with the mindset that everyone, regardless of background and former training, should be able to read my blog. I'm intending to introduce some rigorous math here and there, but they should have no impact for the whole line of story telling. Through the blogs, I hope to share:
 

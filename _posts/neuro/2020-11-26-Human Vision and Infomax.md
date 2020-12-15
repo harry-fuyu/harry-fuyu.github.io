@@ -11,6 +11,7 @@ categories:
 tags:
   - Neuroscience
   - Computational Neuroscience
+  - Information Theory
 
 published: true
 
@@ -32,4 +33,9 @@ header:
     - Mathematical modeling of early visual system
     - Infomax derivation of receptive field -->
 
-    
+Congratulations on making through the four previous posts that gives an overview about the content, philosophy and methodology of neuroscience and machine learning. Starting from this post, we will finally dive into more specific domains and talk about the applications of deep learning models there. 
+
+Firstly, let's talk about biological vision in the first section. It is not only because that it is a topic close to my heart, but also because it is highly pertinent to our first major model, the convolutional neural network, whose invention was very much inspired by the structure of the human visual system. In the second section, I am going to introduce you some ideas from information theory and show you how amazingly and beautifully can we derive the shape of receptive field that aligns with empirical results, with few reasonable and not too simplifying assumptions.
+
+## 1. Human Visual System
+
