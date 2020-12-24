@@ -37,7 +37,7 @@ Exciting! Let's get started!
 
 ### 1.1 Brief history of neuroscience
 
-At 3BC, the brain is believed as a "cooling device" for the heart, and the first anatomical study of the brain is performed only thousand years later by Leonardo Da Vinci, who is extremely interested in human anatomy, produced this annotated drawing of the brain viewed from different angles, as well as some subcortical structures like the basal ganglia on the bottom left. (don't worry! We will revisit and explain all those nouns)
+At 17 century B.C., the Edwin Smith Papyrus contained the first written record of the concept of a brain. However, the Egyptians regarded the brain as nonessential, discarding it explicitly by extracting it out from the nostrils when mummies were made. During the time of ancient Greece, bodies are regarded as sacret, and anatomy is hence strictly prohibited. Lacking the access to anatomical knowledge, ancient Greek philosophers were unable to reform their understanding on the importance of the brain. Aristotle believes that the brain is a cooling device for the heart, where the central intelligence is believed to reside. It was not until thousand years later during Renaissance, when anatomical studies of the brain was performed. Here are some of the drawings of the brain as well as some subcortical structures like the basal ganglia on the bottom left (don't worry! We will revisit and explain all those nouns) by Leonardo Da Vinci. 
 
 ![](/images/da vinci.png)
 
