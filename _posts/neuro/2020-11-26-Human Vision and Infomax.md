@@ -80,5 +80,31 @@ One interesting observation shown in the figure above is that **orientation tuni
 
 ### 1.3 Visual system hierarchy
 
+![](/images/visual_hierarchy.png)
+
+#### 1.3.1 Hierarchy overview
+
+After the visual signals reach V1, information is extracted in hierarchical and parallel manners. After V2, there are mainly two pathways for parallel processing. All information about location goes up to the parietal lobe, and this pathway in dorsal direction is called the **where stream**, or the **dorsal stream**. On the other hand, information about the object itself goes sideway to the temporal lobe, and is called the **what stream**, or the **ventral stream**.
+
+![](/images/MT_LIP.png)
+
+Visual areas higher up in the higher hierarchy have more complicated tuning properties that sometime are not as easily interpreted as those of V1. For example, cells in V5, or called the **Middle Temperal area (MT)**, are tuned to the directions of motion. Cells in V4 are sensitive for colors, and areas further up, like the **Lateral Interparietal area (LIP)**, has cells whose tuning properties can be modulated by current task of the individuals and hence strongly related to visual attention. Intriguingly, this hierarchical and parallel organization of the visual cortices is true in other sensory cortices, however, it is not exhibited in higher order association cortices that are responsible for higher order functions. 
+
+#### 1.3.2 Example: Facial tuning
+Now let us focus on one specific example of neuronal tuning up in the hierarchy. You might have heard the so called "Jennifer Aniston" cell, where the neuron is only excited when the famous American actress, Jennifer Aniston, enters the visual receptive field of your cell. This cell is the embodiment of how complicated the tuning property of a neuron could be. This neuron must be sitting there high up in the hierarchy, and listening to all information extracted by numerous downstream neurons in a parallelled manner. It is true that we have a face area, where **neurons in this area are tuned to the entire face, instead of specific facial features**. 
+
+![](/images/facial_tuning.png)
+
+This figure shows how neuron activation levels change with inversion of faces. Thatcherized means that the eyes and the brows are inverted on the face. We see that unsurprisingly, the normal face gives the highest level of activation marked in blue. Thatcherizing a normal face would cause a significant drop in activity, marked in red. However, if the face itself is inverted, then thatcherizing this inverted face has no inpact on the activation level, with the yellow (inverted) and green (thatcherized inverted) having approximatly overlapping curves. This shows that our selectivity for normal eyes and brows are lost if we invert the whole face, even though the thatcherized inverted face has correct orientation for eyes and brows although at a misplaced positition. Hence, this experiment provides strong evidence that our tuning for faces is holisitic, instead of partial. 
+
+#### 1.3.3 The tethering hypothesis
+
+One of the most important question in psychology and neuroscience is about what is innate and what is learned. Same question applies here: Is our brain following a strict genetic plan in cortical organization? How does a brain cell know which visual area it belongs to? How does plasticity comes into play? 
+
+![](/images/tethering_hypo.png)
+
+Buckner and Krienen proposed the tethering hypothesis back in 2013, arguing that the hierarchical organization of visual cortices is a product of both genetic programming and visual experience. They proposed that V1 and MT act as "anchors" and are hard-coded by genetic programs. Once those two areas are pinned down on the cortex, the other areas form automatically through our visual experiences. 
+
+<!-- It is known that when babies are still in their mother's wombs, the retinas would send randomized activation signals through optical nerves and along up the hierarchy.  -->
 
 
